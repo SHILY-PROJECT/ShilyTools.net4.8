@@ -63,7 +63,7 @@
             this.appExitButton.ForeColor = System.Drawing.Color.White;
             this.appExitButton.HoverState.FillColor = System.Drawing.Color.Red;
             this.appExitButton.HoverState.Parent = this.appExitButton;
-            this.appExitButton.Location = new System.Drawing.Point(515, 9);
+            this.appExitButton.Location = new System.Drawing.Point(561, 9);
             this.appExitButton.Name = "appExitButton";
             this.appExitButton.ShadowDecoration.Color = System.Drawing.Color.Red;
             this.appExitButton.ShadowDecoration.Parent = this.appExitButton;
@@ -94,7 +94,7 @@
             this.inputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.inputTextBox.SelectedText = "";
             this.inputTextBox.ShadowDecoration.Parent = this.inputTextBox;
-            this.inputTextBox.Size = new System.Drawing.Size(530, 140);
+            this.inputTextBox.Size = new System.Drawing.Size(577, 140);
             this.inputTextBox.TabIndex = 1;
             // 
             // resultTextBox
@@ -121,7 +121,7 @@
             this.resultTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.resultTextBox.SelectedText = "";
             this.resultTextBox.ShadowDecoration.Parent = this.resultTextBox;
-            this.resultTextBox.Size = new System.Drawing.Size(530, 140);
+            this.resultTextBox.Size = new System.Drawing.Size(577, 140);
             this.resultTextBox.TabIndex = 2;
             // 
             // shadowForm
@@ -158,7 +158,7 @@
             this.appMinimizedButton.ForeColor = System.Drawing.Color.White;
             this.appMinimizedButton.HoverState.FillColor = System.Drawing.Color.RoyalBlue;
             this.appMinimizedButton.HoverState.Parent = this.appMinimizedButton;
-            this.appMinimizedButton.Location = new System.Drawing.Point(491, 9);
+            this.appMinimizedButton.Location = new System.Drawing.Point(537, 9);
             this.appMinimizedButton.Name = "appMinimizedButton";
             this.appMinimizedButton.ShadowDecoration.Color = System.Drawing.Color.Red;
             this.appMinimizedButton.ShadowDecoration.Parent = this.appMinimizedButton;
@@ -175,7 +175,7 @@
             this.modeHandleTextComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.modeHandleTextComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.modeHandleTextComboBox.FocusedState.Parent = this.modeHandleTextComboBox;
-            this.modeHandleTextComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.modeHandleTextComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.modeHandleTextComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.modeHandleTextComboBox.HoverState.Parent = this.modeHandleTextComboBox;
             this.modeHandleTextComboBox.ItemHeight = 30;
@@ -184,7 +184,7 @@
             this.modeHandleTextComboBox.Name = "modeHandleTextComboBox";
             this.modeHandleTextComboBox.ShadowDecoration.BorderRadius = 10;
             this.modeHandleTextComboBox.ShadowDecoration.Parent = this.modeHandleTextComboBox;
-            this.modeHandleTextComboBox.Size = new System.Drawing.Size(530, 36);
+            this.modeHandleTextComboBox.Size = new System.Drawing.Size(576, 36);
             this.modeHandleTextComboBox.TabIndex = 6;
             this.modeHandleTextComboBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -193,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(542, 408);
+            this.ClientSize = new System.Drawing.Size(588, 408);
             this.Controls.Add(this.modeHandleTextComboBox);
             this.Controls.Add(this.appMinimizedButton);
             this.Controls.Add(this.resultTextBox);

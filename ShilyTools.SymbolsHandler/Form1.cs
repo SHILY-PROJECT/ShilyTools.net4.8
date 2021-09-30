@@ -34,7 +34,9 @@ namespace ShilyTools.SymbolsHandler
             { 
                 ["Экранировать JSON для интерполяции"] = ModesHandleTextEnum.EscapingJsonForInterpolation,
                 ["UrlDecode - декодировать текст"] = ModesHandleTextEnum.UrlDecode,
-                ["UrlEncode - кодировать текст"] = ModesHandleTextEnum.UrlEncode
+                ["UrlEncode - кодировать текст"] = ModesHandleTextEnum.UrlEncode,
+                ["Обработать данные для использования в List<string>"] = ModesHandleTextEnum.ProcessDataForUseInStringList,
+                ["Обработать данные для использования в List<string> и преобразовать в одну строку"] = ModesHandleTextEnum.ProcessDataForUseInStringListAndConvertToOneString
             };
 
         /// <summary>
@@ -116,11 +118,22 @@ namespace ShilyTools.SymbolsHandler
             switch (mode)
             {
                 default:
-                case ModesHandleTextEnum.EscapingJsonForInterpolation:    return inputTextBox.Text.Replace(_symbolsReplace);
-                case ModesHandleTextEnum.UrlDecode:                       return HttpUtility.UrlDecode(inputTextBox.Text);
-                case ModesHandleTextEnum.UrlEncode:                       return HttpUtility.UrlEncode(inputTextBox.Text);
+                case ModesHandleTextEnum.EscapingJsonForInterpolation:                       return inputTextBox.Text.Replace(_symbolsReplace);
+                case ModesHandleTextEnum.UrlDecode:                                          return HttpUtility.UrlDecode(inputTextBox.Text);
+                case ModesHandleTextEnum.UrlEncode:                                          return HttpUtility.UrlEncode(inputTextBox.Text);
+                case ModesHandleTextEnum.ProcessDataForUseInStringList:                      return ProcessDataForUseInStringList(mode);
+                case ModesHandleTextEnum.ProcessDataForUseInStringListAndConvertToOneString: return ProcessDataForUseInStringList(mode);
             }
         }
+
+        /// <summary>
+        /// Обработка данных для использования в списке.
+        /// <param name="mode"></param>
+        /// <returns></returns>
+        /// </summary>
+        private string ProcessDataForUseInStringList(ModesHandleTextEnum mode) =>
+            string.Join(mode == ModesHandleTextEnum.ProcessDataForUseInStringList ? $",{Environment.NewLine}" : ", ",               
+                inputTextBox.Text.Split(new[] { Environment.NewLine}, StringSplitOptions.None).Select(x => $"\"{x}\"").ToList());       
 
         /// <summary>
         /// Загрузка настроек из файла.
